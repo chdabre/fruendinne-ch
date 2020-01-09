@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     setDesktop () {
-      this.isDesktop = window.innerWidth > 450
+      this.isDesktop = window.innerWidth > 500
     }
   }
 }

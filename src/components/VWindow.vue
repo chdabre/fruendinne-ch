@@ -106,7 +106,7 @@ const objectMap = (obj, fn) => Object.fromEntries(
 
 <style lang="scss" scoped>
 .window {
-  position: fixed;
+  position: absolute;
   resize: both;
 }
 </style>
