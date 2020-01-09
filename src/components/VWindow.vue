@@ -28,6 +28,9 @@ export default {
     color: {
       type: String,
       default: '#FFF'
+    },
+    size: {
+      type: Object
     }
   },
   data () {
@@ -45,6 +48,10 @@ export default {
   created () {
     this.geometry.top = window.innerHeight / 2 + (Math.random() * window.innerHeight / 8) * (Math.random() < 0.5 ? -1 : 1)
     this.geometry.left = window.innerWidth / 2 + (Math.random() * window.innerWidth / 8) * (Math.random() < 0.5 ? -1 : 1)
+
+    if (this.size) {
+      this.geometry = { ...this.geometry, ...this.size }
+    }
 
     window.addEventListener('mousedown', ev => {
       // Start dragging if the dragHandle is clicked

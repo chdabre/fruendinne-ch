@@ -2,6 +2,7 @@
   <component
     :is="windowImpl"
     :window="window"
+    :size="{ width: 300, height: 500 }"
     color="#82A3FE"
     title="Shop"
   >

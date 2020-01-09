@@ -2,6 +2,7 @@
   <component
     :is="windowImpl"
     :window="window"
+    :size="{ width: 500, height: 500 }"
     color="#ED7DFE"
     title="Manifest"
   >

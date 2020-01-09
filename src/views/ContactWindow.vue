@@ -2,6 +2,7 @@
   <component
     :is="windowImpl"
     :window="window"
+    :size="{ width: 300, height: 450 }"
     color="#EDF4C0"
     title="Kontakt"
   >

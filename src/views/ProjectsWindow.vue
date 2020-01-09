@@ -2,6 +2,7 @@
   <component
     :is="windowImpl"
     :window="window"
+    :size="{ width: 300, height: 600 }"
     color="#1EFED4"
     title="Projekte"
   >
