@@ -46,8 +46,8 @@ export default {
     }
   },
   created () {
-    this.geometry.top = window.innerHeight / 2 + (Math.random() * window.innerHeight / 8) * (Math.random() < 0.5 ? -1 : 1)
-    this.geometry.left = window.innerWidth / 2 + (Math.random() * window.innerWidth / 8) * (Math.random() < 0.5 ? -1 : 1)
+    this.geometry.top = window.innerHeight / 2 + (Math.random() * window.innerHeight / 4) * (Math.random() < 0.5 ? -1 : 1) - window.innerHeight / 4
+    this.geometry.left = window.innerWidth / 2 + (Math.random() * window.innerWidth / 4) * (Math.random() < 0.5 ? -1 : 1) - window.innerWidth / 4
 
     if (this.size) {
       this.geometry = { ...this.geometry, ...this.size }
