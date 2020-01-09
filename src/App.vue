@@ -48,11 +48,8 @@ export default {
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: Lemon/Milk;
-  font-weight: bold;
-  src: url("assets/fonts/LemonMilkbold.otf") format("opentype");
-}
+@import "style/fonts";
+
 * {
   margin: 0;
   padding: 0;
