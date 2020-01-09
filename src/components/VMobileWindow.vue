@@ -1,9 +1,9 @@
 <template>
   <div
-    class="mobile-window"
+    class="mobile-window window"
     :style="windowStyle"
   >
-    <div class="mobile-window__title">
+    <div class="window__title">
       <h3 class="drag-handle" ref="dragHandle">{{ title }}</h3>
       <div class="spacer"></div>
       <button class="close-btn" @click="$router.push('/')">
@@ -11,7 +11,7 @@
       </button>
     </div>
 
-    <div class="mobile-window__content">
+    <div class="window__content">
       <slot name="content"></slot>
     </div>
   </div>
@@ -44,24 +44,6 @@ export default {
   left: 2rem;
   right: 2rem;
   min-height: calc(100% - 4rem);
-
-  border: 5px solid black;
-  overflow: auto;
-
-  &__title {
-     display: flex;
-     padding: 1rem;
-     user-select: none;
-     text-transform: uppercase;
-
-    .close-btn {
-      background: none;
-      border: none;
-    }
-  }
-  &__content {
-    padding: 0 1rem 1rem 1rem;
-  }
 }
 .spacer { flex:  1; }
 </style>

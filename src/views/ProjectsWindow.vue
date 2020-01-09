@@ -2,7 +2,7 @@
   <component
     :is="windowImpl"
     :window="window"
-    color="#ED7DFE"
+    color="#1EFED4"
     title="Projekte"
   >
     <template slot="content">

@@ -107,27 +107,6 @@ const objectMap = (obj, fn) => Object.fromEntries(
 <style lang="scss" scoped>
 .window {
   position: fixed;
-  border: 5px solid black;
   resize: both;
-  overflow: auto;
-
-  &__title {
-    display: flex;
-    padding: 1rem;
-    user-select: none;
-    text-transform: uppercase;
-
-    .close-btn {
-      background: none;
-      border: none;
-    }
-    .drag-handle {
-      cursor: move;
-    }
-  }
-  &__content {
-    padding: 0 1rem 1rem 1rem;
-  }
 }
-.spacer { flex:  1; }
 </style>

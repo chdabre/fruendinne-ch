@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <div class="content-container">
+      <div class="logo">
+        <img src="./assets/logo.svg">
+      </div>
+
       <nav class="main-nav">
         <ul>
-          <li><router-link to="manifest">MANIFEST</router-link></li>
-          <li><router-link to="projects">PROJECTS</router-link></li>
-          <li><router-link to="shop">SHOP</router-link></li>
-          <li><router-link to="contact">CONTACT</router-link></li>
+          <li><router-link to="manifest">Manifest</router-link></li>
+          <li><router-link to="projects">Projekte</router-link></li>
+          <li><router-link to="shop">Shop</router-link></li>
+          <li><router-link to="contact">Kontakt</router-link></li>
         </ul>
       </nav>
     </div>
@@ -48,48 +52,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "style/fonts";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Source Code Pro', monospace;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.content-container {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
-
-  border: 6px solid black;
-}
-
-.main-nav {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-
-  li {
-    list-style: none;
-    text-align: right;
-    font-size: 32px;
-    font-family: 'Lemon/Milk', sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-}
-
-h3 {
-  font-family: 'Lemon/Milk', sans-serif;
-}
+@import "style/main";
 </style>
