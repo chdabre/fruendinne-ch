@@ -49,11 +49,14 @@ export default {
 
 <style lang="scss">
 @import "style/fonts";
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: 'Source Code Pro', monospace;
 }
 
 a {

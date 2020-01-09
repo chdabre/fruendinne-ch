@@ -50,7 +50,6 @@ export default {
 
   &__title {
      display: flex;
-     width: 100%;
      padding: 1rem;
      user-select: none;
      text-transform: uppercase;
