@@ -46,7 +46,6 @@ export default {
   min-height: calc(100% - 4rem);
 
   border: 5px solid black;
-  resize: both;
   overflow: auto;
 
   &__title {
