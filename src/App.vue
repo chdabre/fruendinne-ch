@@ -15,6 +15,7 @@
         v-for="(window, index) in windows"
         :is="window.component" :key="index"
         :window="window"
+        :desktop="isDesktop"
       ></component>
     </template>
     <template v-else>
@@ -32,12 +33,16 @@ export default {
     }
   },
   created () {
-    window.addEventListener('resize', () => {
-      this.isDesktop = window.innerWidth > 450
-    })
+    window.addEventListener('resize', () => this.setDesktop())
+    this.setDesktop()
   },
   computed: {
     ...mapState(['windows'])
+  },
+  methods: {
+    setDesktop () {
+      this.isDesktop = window.innerWidth > 450
+    }
   }
 }
 </script>

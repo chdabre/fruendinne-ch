@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ManifestWindow from '../views/ManifestWindow'
 import store from '../store/index'
+
+import ManifestWindow from '../views/ManifestWindow'
 import ProjectsWindow from '../views/ProjectsWindow'
-import VMobileWindow from '../components/VMobileWindow'
-import ManifestContent from '../views/ManifestContent'
+import ShopWindow from '../views/ShopWindow'
+import ContactWindow from '../views/ContactWindow'
 
 Vue.use(VueRouter)
 
@@ -12,21 +13,29 @@ const routes = [
   {
     path: '/manifest',
     name: 'manifest',
-    component: VMobileWindow,
-    meta: {
-      component: ManifestWindow,
-      content: ManifestContent
-    }
+    component: ManifestWindow
   },
   {
     path: '/projects',
     name: 'projects',
-    component: VMobileWindow,
-    meta: {
-      component: ProjectsWindow
-    }
+    component: ProjectsWindow
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    component: ShopWindow
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactWindow
   }
 ]
+
+routes.forEach(route => {
+  route.meta = {}
+  route.meta.component = route.component
+})
 
 const router = new VueRouter({
   mode: 'history',
