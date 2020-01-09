@@ -3,22 +3,27 @@
     <div class="content-container">
       <nav class="main-nav">
         <ul>
-          <li>MANIFEST</li>
-          <li>PROJECTS</li>
-          <li>SHOP</li>
-          <li>CONTACT</li>
+          <li><router-link to="manifest">MANIFEST</router-link></li>
+          <li><router-link to="projects">PROJECTS</router-link></li>
+          <li><router-link to="shop">SHOP</router-link></li>
+          <li><router-link to="contact">CONTACT</router-link></li>
         </ul>
       </nav>
     </div>
-
-    <v-window></v-window>
+    <div>
+      <component
+        v-for="(window, index) in windows"
+        :is="window.component" :key="index"
+        :window="window"
+      ></component>
+    </div>
   </div>
 </template>
 
 <script>
-import VWindow from './components/VWindow'
+import { mapState } from 'vuex'
 export default {
-  components: { VWindow }
+  computed: mapState(['windows'])
 }
 </script>
 
@@ -32,6 +37,11 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .content-container {

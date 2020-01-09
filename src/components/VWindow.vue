@@ -3,11 +3,12 @@
     class="window"
     ref="window"
     :style="windowStyle"
+    @mousedown="focus"
   >
     <div class="window__title">
-      <h3 class="drag-handle" ref="dragHandle">Window Title</h3>
+      <h3 class="drag-handle" ref="dragHandle">{{ title }}</h3>
       <div class="spacer"></div>
-      <button class="close-btn">
+      <button class="close-btn" @click="close">
         <img src="../assets/close-icon.svg">
       </button>
     </div>
@@ -21,19 +22,30 @@
 <script>
 export default {
   name: 'VWindow',
+  props: {
+    window: Object,
+    title: String,
+    color: {
+      type: String,
+      default: '#FFF'
+    }
+  },
   data () {
     return {
       focused: false,
       dragging: false,
       geometry: {
-        top: 500,
-        left: 500,
+        top: 0,
+        left: 0,
         width: 300,
         height: 200
       }
     }
   },
   created () {
+    this.geometry.top = window.innerHeight / 2 + (Math.random() * window.innerHeight / 8) * (Math.random() < 0.5 ? -1 : 1)
+    this.geometry.left = window.innerWidth / 2 + (Math.random() * window.innerWidth / 8) * (Math.random() < 0.5 ? -1 : 1)
+
     window.addEventListener('mousedown', ev => {
       // Start dragging if the dragHandle is clicked
       if (this.$refs.dragHandle && this.$refs.dragHandle.contains(ev.target)) {
@@ -53,7 +65,7 @@ export default {
       }
 
       // Update the dimensions if the user is resizing the window
-      if (this.$refs.window.contains(ev.target)) {
+      if (this.$refs.window && this.$refs.window.contains(ev.target)) {
         this.geometry.width = parseInt(this.$refs.window.style.width.slice(0, -2))
         this.geometry.height = parseInt(this.$refs.window.style.height.slice(0, -2))
       }
@@ -61,7 +73,19 @@ export default {
   },
   computed: {
     windowStyle () {
-      return objectMap(this.geometry, v => v + 'px')
+      return {
+        ...objectMap(this.geometry, v => v + 'px'),
+        zIndex: this.window.focused ? 100 : 0,
+        backgroundColor: this.color
+      }
+    }
+  },
+  methods: {
+    close () {
+      this.$store.dispatch('closeWindow', this.window.component)
+    },
+    focus () {
+      this.$store.dispatch('openWindow', { to: this.window.component })
     }
   }
 }
@@ -87,12 +111,12 @@ const objectMap = (obj, fn) => Object.fromEntries(
   resize: both;
   overflow: auto;
 
-  background-color: #ED7DFE;
   &__title {
     display: flex;
     width: 100%;
     padding: 1rem;
     user-select: none;
+    text-transform: uppercase;
 
     .close-btn {
       background: none;
@@ -102,7 +126,9 @@ const objectMap = (obj, fn) => Object.fromEntries(
       cursor: move;
     }
   }
+  &__content {
+    padding: 0 1rem 1rem 1rem;
+  }
 }
-
 .spacer { flex:  1; }
 </style>
