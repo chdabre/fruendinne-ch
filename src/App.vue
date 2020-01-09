@@ -10,20 +10,35 @@
         </ul>
       </nav>
     </div>
-    <div>
+    <template v-if="isDesktop">
       <component
         v-for="(window, index) in windows"
         :is="window.component" :key="index"
         :window="window"
       ></component>
-    </div>
+    </template>
+    <template v-else>
+      <router-view></router-view>
+    </template>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 export default {
-  computed: mapState(['windows'])
+  data () {
+    return {
+      isDesktop: false
+    }
+  },
+  created () {
+    window.addEventListener('resize', () => {
+      this.isDesktop = window.innerWidth > 450
+    })
+  },
+  computed: {
+    ...mapState(['windows'])
+  }
 }
 </script>
 

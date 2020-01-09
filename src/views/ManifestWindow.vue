@@ -4,24 +4,20 @@
     color="#ED7DFE"
     title="Manifest"
   >
-  <template slot="content">
-    Hallo das ist das Manifest
-  </template>
+    <ManifestContent slot="content" />
   </v-window>
 </template>
 
 <script>
 import VWindow from '../components/VWindow'
+import ManifestContent from './ManifestContent'
 
 export default {
   name: 'ManifestWindow',
   props: ['window'],
   components: {
+    ManifestContent,
     VWindow
   }
 }
 </script>
-
-<style scoped>
-
-</style>
