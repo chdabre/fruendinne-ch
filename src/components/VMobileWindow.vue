@@ -44,7 +44,7 @@ export default {
   left: 2rem;
   right: 2rem;
   min-height: calc(100% - 4rem);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .spacer { flex:  1; }
 </style>
