@@ -24,6 +24,7 @@
           </article>
           <article class="project">
             <h4>Fründinne Podcast</h4>
+            <img src="../assets/images/PodcastCover.jpg">
             <a href="https://open.spotify.com/show/0HrIowmdB9nmnvMt5D0Z4T" target="_blank">Spotify</a>
           </article>
           <article class="project">
