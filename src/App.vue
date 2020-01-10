@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ fixed: isDesktop }">
+  <div id="app" :class="{ 'fixed': isDesktop }">
     <div class="content-container">
       <div class="logo">
         <img src="./assets/logo.svg">
