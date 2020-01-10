@@ -14,6 +14,12 @@ html {
   // background-size: cover;
 }
 
+@media (min-width: 500px) {
+  html {
+    background-size: cover;
+  }
+}
+
 .fixed {
   width: 100vw;
   height: 100vh;
