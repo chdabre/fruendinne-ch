@@ -14,17 +14,19 @@
         <section class="projects">
           <article class="project">
             <h4>RUN NORBERT RUN:</h4>
+            <img src="../assets/images/runnorbertrun.jpg" alt="RUN NORBERT RUN">
             <a href="http://runnorbertrun.herokuapp.com/" target="_blank">LIVE</a>
             <a href="https://github.com/chdabre/baselhack-fruendinne/" target="_blank">GitHub</a>
           </article>
           <article class="project">
             <h4>Connässeur / BERN HACKT</h4>
+            <img src="../assets/images/conaesseur.jpg" alt="RUN NORBERT RUN">
             <a href="https://www.youtube.com/watch?v=tNT2g7JOnj8&feature=emb_title" target="_blank">BärnHäckt</a>
             <a href="https://github.com/chdabre/bernhackt-filmimperium-fruendinne" target="_blank">GitHub</a>
           </article>
           <article class="project">
             <h4>Fründinne Podcast</h4>
-            <img src="../assets/images/PodcastCover.jpg">
+            <img src="../assets/images/PodcastCover.jpg" alt="Fründinne Podcast">
             <a href="https://open.spotify.com/show/0HrIowmdB9nmnvMt5D0Z4T" target="_blank">Spotify</a>
           </article>
           <article class="project">
