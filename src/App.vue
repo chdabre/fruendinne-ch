@@ -2,7 +2,7 @@
   <div id="app" :class="{ 'fixed': isDesktop }">
     <div class="content-container">
       <div class="logo">
-        <img src="./assets/logo.svg">
+        <img src="./assets/logo.svg" alt="Fründinne">
       </div>
 
       <nav class="main-nav">

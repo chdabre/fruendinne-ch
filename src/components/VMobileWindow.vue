@@ -7,7 +7,7 @@
       <h3 class="drag-handle" ref="dragHandle">{{ title }}</h3>
       <div class="spacer"></div>
       <button class="close-btn" @click="$router.push('/')">
-        <img src="../assets/close-icon.svg">
+        <img src="../assets/close-icon.svg" alt="Schliessen">
       </button>
     </div>
 
