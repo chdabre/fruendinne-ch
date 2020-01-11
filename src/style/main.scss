@@ -20,6 +20,12 @@ html {
   }
 }
 
+@media (max-width: 350px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 .fixed {
   width: 100vw;
   height: 100vh;

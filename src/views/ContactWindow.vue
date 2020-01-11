@@ -9,7 +9,7 @@
     <template slot="content">
       <p>
         Du willst mehr oder weniger wissen? Möchtest gerne eine Idee mit uns teilen? Brauchst Geld für eine Abtreibung? Mal unverbindlich was trinken gehen? Auch zu uns fründinne gehören? Mal gemeinsam das Hüftgold schwingen gehen? Oder uns einfach deine Meinung geigen?<br/>
-        Erreichen kannst du uns am einfachsten über DM auf instagram oder unter <a href="mailto:hotmale@fruendinne.com">hotmale@fruendinne.com</a>.
+        Erreichen kannst du uns am einfachsten über DM auf instagram oder unter <a class="email-link" href="mailto:hotmale@fruendinne.ch">hotmale@fruendinne.ch</a>.
       </p>
     </template>
   </component>
@@ -29,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.email-link {
+  font-size: 0.9rem;
+}
+</style>
