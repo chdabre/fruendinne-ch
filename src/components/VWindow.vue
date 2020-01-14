@@ -7,7 +7,6 @@
   >
     <div class="window__title">
       <h3 class="drag-handle" ref="dragHandle">{{ title }}</h3>
-      <div class="spacer"></div>
       <button class="close-btn" @click="close">
         <img src="../assets/close-icon.svg" alt="Schliessen">
       </button>
@@ -115,5 +114,9 @@ const objectMap = (obj, fn) => Object.fromEntries(
 .window {
   position: absolute;
   resize: both;
+}
+
+.drag-handle {
+  flex: 1;
 }
 </style>
